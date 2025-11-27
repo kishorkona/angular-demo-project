@@ -1,4 +1,4 @@
-import { Employee } from "./Employee";
+import { Employee } from "./employee-model";
 
 export interface ApiResponse {
     code: string,

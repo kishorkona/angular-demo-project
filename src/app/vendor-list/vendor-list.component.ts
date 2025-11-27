@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BrowserModule } from "@angular/platform-browser";
-import { Employee } from '../models/Employee';
+import { Employee } from '../models/employee-model';
 import { EmployeeService } from '../services/employee.service';
 import { ApiResponse } from '../models/api-response';
 
