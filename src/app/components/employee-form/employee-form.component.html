@@ -1,0 +1,43 @@
+<p>employee-form works!</p>
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+  
+  <h2>Simple User Input Form</h2>
+
+  <div>
+    <label for="username">Employee Id</label>
+    <input type="text" id="employeeId" formControlName="employeeId">
+
+    <div *ngIf="employeeForm.get('employeeId')?.invalid && employeeForm.get('employeeId')?.touched" class="error-message">
+      EmployeeId is required.
+    </div>
+  </div>
+
+  <br>
+
+  <div>
+    <label for="firstName">First Name</label>
+    <input type="firstName" id="firstName" formControlName="firstName">
+
+    <div *ngIf="employeeForm.get('firstName')?.invalid && employeeForm.get('firstName')?.touched" class="error-message">
+      FirstName is required.
+    </div>
+  </div>
+
+  <br>
+
+  <button type="submit" [disabled]="employeeForm.invalid">
+    Submit Data
+  </button>
+  
+</form>
+<hr>
+<p>Form Status: <strong>{{ employeeForm.status }}</strong></p>
+<style>
+  .error-message {
+    color: red;
+    font-size: 0.8em;
+  }
+  input.ng-invalid.ng-touched {
+    border: 1px solid red;
+  }
+</style>

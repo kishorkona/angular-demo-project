@@ -9,12 +9,14 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { VendorListComponent } from './vendor-list/vendor-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     VendorListComponent,
+    EmployeeFormComponent,
     HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
