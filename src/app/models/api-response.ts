@@ -4,5 +4,6 @@ export interface ApiResponse {
     code: string,
     status: string,
     message: string,
-    data: Employee[]   
+    mapData: Map<string, object>,
+    listData: Employee[]   
 }

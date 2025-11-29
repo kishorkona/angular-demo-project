@@ -8,15 +8,8 @@ import { ApiResponse } from '../models/api-response';
   providedIn: 'root'
 })
 export class EmployeeService {
-  private employees: Employee[] = [
-    {employeeId: 10, firstName: 'kishor', lastName: '58', email: 'Male'},
-    {employeeId: 11, firstName: 'vijay', lastName: '58', email: 'Male'},
-    {employeeId: 12, firstName: 'anish', lastName: '10', email: 'Male'},
-    {employeeId: 13, firstName: 'ishant', lastName: '9', email: 'Male'}
-  ];
   private mainUrl = "http://localhost:3030/spring-test-proj/api/failover/"
   private apiUrl = this.mainUrl+'getAllEmployees';
-  //private apiUrl = this.mainUrl+'newGetAllEmployees';
   private addEmployeeUrl = this.mainUrl+'addEmployee';
 
   constructor(private http: HttpClient) { }

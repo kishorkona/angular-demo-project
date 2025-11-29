@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { EmployeeService } from '../../services/employee.service';
@@ -6,8 +7,9 @@ import { EmployeeService } from '../../services/employee.service';
 @Component({
   selector: 'app-employee-form',
   standalone: true,
-  imports: [
-    ReactiveFormsModule
+   imports: [
+     ReactiveFormsModule,
+     CommonModule
   ],
   templateUrl: './employee-form.component.html',
   styleUrl: './employee-form.component.css'

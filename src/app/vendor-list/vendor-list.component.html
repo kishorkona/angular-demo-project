@@ -1,4 +1,14 @@
-<p>{{title}}</p>
-<div *ngFor="let employee of employees">
+<p><b>{{title}}</b></p>
+<!-- <div *ngFor="let employee of employees">
     <p>{{employee.employeeId}} :: {{employee.firstName}}</p>
+</div> -->
+<div class="ag-theme-quartz">
+    <ag-grid-angular
+        style="width: 1500px; height: 500px;"
+        class="ag-theme-alpine"
+        [rowData]="rowData"
+        [columnDefs]="columnDefs"
+        [defaultColDef]="defaultColDef"
+        (gridReady)="onGridReady($event)"
+    />
 </div>

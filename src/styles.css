@@ -112,9 +112,9 @@ app-top-bar {
   background-color: #1976d2;
   padding: 16px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
 }
 
 app-top-bar h1 {
