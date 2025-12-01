@@ -11,7 +11,7 @@ export class EmployeeService {
   private mainUrl = "http://localhost:3030/spring-test-proj/api/failover/"
   private apiUrl = this.mainUrl+'getAllEmployees';
   private addEmployeeUrl = this.mainUrl+'addEmployee';
-
+  
   constructor(private http: HttpClient) { }
 
   /*

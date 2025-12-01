@@ -21,6 +21,14 @@ import { VendorListComponent } from '../vendor-list/vendor-list.component';
 export class ProductListComponent {
   products = [...products];
 
+  ngOnInit() {
+    console.log(`ProductListComponent is initialized..`);
+  }
+
+  ngOnDestroy() {
+    console.log(`ProductListComponent is destroyed..`);
+  }
+
   share() {
     window.alert('The product has been shared!');
   }

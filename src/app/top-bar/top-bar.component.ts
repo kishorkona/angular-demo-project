@@ -15,6 +15,14 @@ import { ProductListComponent } from '../product-list/product-list.component';
 })
 export class TopBarComponent {
 
+  ngOnInit() {
+    console.log(`TopBarComponent is initialized..`);
+  }
+
+  ngOnDestroy() {
+    console.log(`TopBarComponent is destroyed..`);
+  }
+
 }
 
 

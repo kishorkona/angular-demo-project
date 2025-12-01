@@ -61,7 +61,7 @@ export class VendorListComponent implements OnInit{
   ];
 
   ngOnInit(): void {
-      console.log('ngOnInit called..');
+    console.log(`VendorListComponent is initialized..`);
       this.gridOptions = {
         autoSizeStrategy: {
           type: 'fitCellContents', // Sizes columns to fit cell content
@@ -73,6 +73,12 @@ export class VendorListComponent implements OnInit{
         }
       };     
   }
+
+  ngOnDestroy(): void {
+    console.log(`VendorListComponent is destroyed..`);       
+  }
+
+  
 
   onGridReady(params: GridReadyEvent) {
     console.log('OnGridReady...');

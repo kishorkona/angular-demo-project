@@ -20,6 +20,7 @@ export class EmployeeFormComponent implements OnInit {
   constructor(private employeeService: EmployeeService){}
   
   ngOnInit(): void {
+    console.log(`EmployeeFormComponent is initialized..`);
     // 2. Initialize the FormGroup and its child FormControl elements
     this.employeeForm = new FormGroup({
       // Define the first text box control (with a required validator)
@@ -38,5 +39,9 @@ export class EmployeeFormComponent implements OnInit {
       } else {
         console.log('Form is invalid. Cannot submit.');
       }
+    }
+
+    ngOnDestroy() {
+      console.log(`EmployeeFormComponent is destroyed..`);
     }
 }

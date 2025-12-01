@@ -13,6 +13,14 @@ import { TopBarComponent } from './top-bar/top-bar.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {  
+
+  ngOnInit(): void {
+    console.log(`AppComponent is initialized..`);       
+  }
+
+  ngOnDestroy(): void {
+    console.log(`AppComponent is destroyed..`);       
+  }
 }
 
 

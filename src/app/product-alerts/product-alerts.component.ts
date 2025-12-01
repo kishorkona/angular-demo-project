@@ -13,4 +13,12 @@ export class ProductAlertsComponent {
 
   @Input() product: Product | undefined;
   @Output() notify = new EventEmitter();
+
+  ngOnInit() {
+    console.log(`ProductAlertsComponent is initialized..`);
+  }
+
+  ngOnDestroy() {
+    console.log(`ProductAlertsComponent is destroyed..`);
+  }
 }
