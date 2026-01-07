@@ -62,7 +62,8 @@ export class EmployeeService {
       );
       */
     var respStatus = '';
-    (this.http.post<ApiResponse>(API_EMPLOYEE_CONST.ENDPOINTS.ADD_EMPLOYEE_URL, newEmployee, {headers: httpOptions})) // The Observable returned by http.post()
+    const url = API_EMPLOYEE_CONST.MAIN_URL+API_EMPLOYEE_CONST.ENDPOINTS.ADD_EMPLOYEE_URL;
+    (this.http.post<ApiResponse>(url, newEmployee, {headers: httpOptions})) // The Observable returned by http.post()
     .subscribe({
         // 1. Success Callback
         next: (response) => {
