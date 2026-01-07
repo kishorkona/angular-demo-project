@@ -6,9 +6,8 @@ import { ProductListComponent } from '../product-list/product-list.component';
 @Component({
   selector: 'app-top-bar',
   imports: [
-    RouterModule,
-    ProductListComponent    
-  ],
+    RouterModule
+],
   standalone: true,
   templateUrl: './top-bar.component.html',
   styleUrls: ['./top-bar.component.css']

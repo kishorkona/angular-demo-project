@@ -3,14 +3,15 @@ import { Employee } from '../models/employee-model';
 import { Observable, of} from 'rxjs';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { ApiResponse } from '../models/api-response';
+import { API_EMPLOYEE_CONST } from '../constants/demo-app-constants';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
-  private mainUrl = "http://localhost:3030/spring-test-proj/api/failover/"
-  private apiUrl = this.mainUrl+'getAllEmployees';
-  private addEmployeeUrl = this.mainUrl+'addEmployee';
+  //private mainUrl = "http://localhost:3030/spring-test-proj/api/failover/"
+  //private apiUrl = this.mainUrl+'getAllEmployees';
+  //private addEmployeeUrl = this.mainUrl+'addEmployee';
   
   constructor(private http: HttpClient) { }
 
@@ -34,8 +35,9 @@ export class EmployeeService {
         'X-Custom-Header': 'my-custom-value',
         'Authorization': 'Bearer YOUR_AUTH_TOKEN_HERE' // Example for authentication
       });
-
-      return (this.http.get<ApiResponse>(this.apiUrl, {headers: httpOptions}))
+      const url = API_EMPLOYEE_CONST.MAIN_URL+API_EMPLOYEE_CONST.ENDPOINTS.GET_ALL_EMPLOYEES_URL;
+      console.log('kishor value=' +url)
+      return (this.http.get<ApiResponse>(url, {headers: httpOptions}))
       //return of(this.employees);
     }
 
@@ -60,7 +62,7 @@ export class EmployeeService {
       );
       */
     var respStatus = '';
-    (this.http.post<ApiResponse>(this.addEmployeeUrl, newEmployee, {headers: httpOptions})) // The Observable returned by http.post()
+    (this.http.post<ApiResponse>(API_EMPLOYEE_CONST.ENDPOINTS.ADD_EMPLOYEE_URL, newEmployee, {headers: httpOptions})) // The Observable returned by http.post()
     .subscribe({
         // 1. Success Callback
         next: (response) => {

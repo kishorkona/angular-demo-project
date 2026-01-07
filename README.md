@@ -1,3 +1,6 @@
+# Sample End points:
+``` http://localhost:4200/vendorList
+
 # DemoApp
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.0.

@@ -1,18 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { EmployeeFormComponent } from '../components/employee-form/employee-form.component';
 import { ProductAlertsComponent } from '../product-alerts/product-alerts.component';
 
 import { products } from '../products';
-import { VendorListComponent } from '../vendor-list/vendor-list.component';
 
 @Component({
   imports: [
     ProductAlertsComponent,
-    EmployeeFormComponent,
-    VendorListComponent,
     CommonModule
-  ],
+],
   standalone: true,
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
